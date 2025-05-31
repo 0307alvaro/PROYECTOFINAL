@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 10px 0;
+    font-family: sans-serif;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.titulo {
+    margin: 15px 0;
+    color: rgb(255, 255, 255);
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.contenedor {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 92%;
+    max-width: 850px;
+    box-sizing: border-box;
+    flex-shrink: 1;
+}
+
+.form-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: nowrap;
+}
+
+.columna {
+    flex: 1;
+}
+
+.cuadro {
+    background: #fff;
+    padding: 12px 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.cuadro h3 {
+    margin: 0 0 9px;
+    font-size: 17px;
+    color: #444;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-bottom: 9px;
+    color: #555;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 7px 8px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.botones {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 9px 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.resultados {
+    background: #eef4ff;
+    padding: 15px 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.resultados h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #222;
+}
+
+.resultados ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.resultados li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#videoFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.input-nombre {
+    width: 20%;
+    max-width: 150px;
+}

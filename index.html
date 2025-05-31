@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Presupuesto Mensual</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="titulo">Calculadora de Presupuesto</h1>
+    <video autoplay muted loop id="videoFondo">
+        <source src="static/fondo.mp4" type="video/mp4" />
+    </video>
+    <div class="contenedor">
+        <form method="post" class="form-grid">
+            <div class="columna izquierda">
+                <div class="cuadro">
+                    <label>Nombre
+                        <input type="text" name="nombre" class="input-nombre" required>
+                    </label>
+                </div>
+                <div class="cuadro">
+                    <h3>Ingresos</h3>
+                    <label>Salario<input type="number" name="salario" required min="0" step="any"></label>
+                    <label>Adicionales<input type="number" name="adicionales"></label>
+                </div>
+                <div class="cuadro">
+                    <h3>Hogar</h3>
+                    <label>Alquiler<input type="number" name="alquiler"></label>
+                    <label>Internet<input type="number" name="internet"></label>
+                    <label>Cable<input type="number" name="cable"></label>
+                </div>
+                <div class="cuadro">
+                    <h3>Transporte</h3>
+                    <label>Combustible<input type="number" name="combustible"></label>
+                    <label>Público<input type="number" name="publico"></label>
+                </div>
+            </div>
+
+            <div class="columna derecha">
+                <div class="cuadro">
+                    <h3>Educación</h3>
+                    <label>Matrícula<input type="number" name="matricula"></label>
+                    <label>Libros<input type="number" name="libros"></label>
+                </div>
+                <div class="cuadro">
+                    <h3>Otros</h3>
+                    <input type="number" name="otros">
+                </div>
+                <div class="cuadro">
+                    <h3>Ahorro / Inversión</h3>
+                    <input type="number" name="ahorro">
+                </div>
+
+                <div class="botones">
+                    <button type="submit">Calcular</button>
+                </div>
+
+                {% if resultados %}
+                <div class="resultados">
+                    <h2>Resultados{% if nombre %} para {{ nombre }}{% endif %}</h2>
+                    <ul>
+                        {% for cat, (porcentaje, monto) in resultados.items() %}
+                            <li><strong>{{ cat }}:</strong> {{ porcentaje }}% (S/. {{ "%.2f"|format(monto) }})</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
