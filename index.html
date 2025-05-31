@@ -55,6 +55,10 @@
                     <button type="submit">Calcular</button>
                 </div>
 
+                {% if error %}
+                    <div class="mensaje-error">{{ error }}</div>
+                {% endif %}
+
                 {% if resultados %}
                 <div class="resultados">
                     <h2>Resultados{% if nombre %} para {{ nombre }}{% endif %}</h2>

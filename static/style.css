@@ -141,3 +141,13 @@ input[type=number]::-webkit-outer-spin-button {
     width: 20%;
     max-width: 150px;
 }
+.mensaje-error {
+    color: red;
+    font-weight: bold;
+    margin-top: 12px;
+    text-align: center;
+    background: #ffe6e6;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid red;
+}
